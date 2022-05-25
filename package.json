@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-dcc",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Node-red Daikin Cloud Controller (experimental)",
   "main": "dcc.js",
   "homepage": "https://github.com/wd4711/dcc",
@@ -24,15 +24,14 @@
     "name": "Bart Janisse",
     "url": "https://github.com/bartjanisse/node-red-contrib_BRP069C4"
   },
-    "contributors": [
-    ],
-    "license": "MIT",
-    "dependencies": {
-      "daikin-controller-cloud": "0.2.1"
-    },
-    "node-red": {
-      "nodes": {
-        "Daikin-Controller": "dcc.js"
-      }
+  "contributors": [],
+  "license": "MIT",
+  "dependencies": {
+    "daikin-controller-cloud": "0.2.1"
+  },
+  "node-red": {
+    "nodes": {
+      "Daikin-Controller": "dcc.js"
     }
   }
+}
