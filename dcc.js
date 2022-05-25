@@ -3,7 +3,6 @@ const DaikinCloud = require("daikin-controller-cloud");
 const fs = require('fs');
 const path = require('path');
 const { exit } = require("process");
-const cacheTime = 10;
 
 const options = {
     logger: console.log,          // optional, logger function used to log details depending on loglevel
@@ -23,6 +22,7 @@ let devices;
 module.exports = function (RED) {
 
     function daikin_brp069c4Node(config) {
+        const cacheTime = config.cachetime || 60;
         RED.nodes.createNode(this, config);
         let node = this;
         options.logLevel = config.logLevel

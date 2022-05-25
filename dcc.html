@@ -13,11 +13,15 @@
             retry: {
                 value: "3",
                 validate: RED.validators.number()
+            },
+            cachetime: {
+                value: "10",
+                validate: RED.validators.number()
             }
         },
         credentials: {
-            username: { type: "text"},
-            password: { type: "password"}
+            username: { type: "text" },
+            password: { type: "password" }
         },
         inputs: 1,
         outputs: 1,
@@ -26,8 +30,8 @@
             return this.name || "Daikin-Cloud-Controller";
         }
     });
-
 </script>
+
 <script type="text/x-red" data-template-name="Daikin-Cloud-Controller">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i>Name</label>
@@ -62,6 +66,10 @@
     <div class="form-row">
         <label for="node-input-retry"><i class="fa fa-repeat"></i>Retries</label>
         <input type="text" id="node-input-retry">
+    </div>
+        <div class="form-row">
+        <label for="node-input-cachetime"><i class="fa fa-database"></i>Cache time in sec</label>
+        <input type="text" id="node-input-cachetime">
     </div>
 </script>
 <script type="text/x-red" data-help-name="Daikin-Cloud-Controller">
