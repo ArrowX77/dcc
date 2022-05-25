@@ -18,7 +18,6 @@
   "keywords": [
     "node-red",
     "daikin",
-    "BRP069C4",
     "cloud"
   ],
   "author": {
@@ -26,11 +25,6 @@
     "url": "https://github.com/bartjanisse/node-red-contrib_BRP069C4"
   },
     "contributors": [
-      {
-        "name": "Christian Hauß",
-        "email": "christian@hauss.name",
-        "url": "https://github.com/DrHauss/node-red-contrib_BRP069C4"
-      }
     ],
     "license": "MIT",
     "dependencies": {
