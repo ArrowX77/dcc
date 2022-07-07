@@ -22,7 +22,7 @@ let devices;
 module.exports = function (RED) {
 
     function daikin_brp069c4Node(config) {
-        const cacheTime = config.cachetime || 60;
+        const cacheTime = +config.cachetime || 60;
         RED.nodes.createNode(this, config);
         let node = this;
         options.logLevel = config.logLevel
@@ -53,10 +53,10 @@ module.exports = function (RED) {
 
                 // Load individual settings for timeout and retry
                 if (config.timeout) {
-                    options.communicationTimeout = config.timeout;
+                    options.communicationTimeout = +config.timeout;
                 }
                 if (config.retry) {
-                    options.communicationRetries = config.retry;
+                    options.communicationRetries = +config.retry;
                 }
 
                 // Load Tokens if they already exist on disk
