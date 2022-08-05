@@ -30,7 +30,7 @@ This is an example code for a node-red function that will change the cooling tem
     msg.payload = {
         ssid :'DaikinAPxxxxx',
         managementPoint :'climateControl',
-        dataPoint : 'onOffMode',
+        dataPoint : 'temperatureControl',
         dataPointPath : '/operationModes/cooling/setpoints/roomTemperature',
         value : 20
     };
