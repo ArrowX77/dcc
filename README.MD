@@ -23,3 +23,16 @@ This Node **doesn't** use a public and documented API for controlling the AC dev
     * msg.payload.dataPointPath = Only needed in some cases
     * msg.payload.value = target value
 
+## Example of a node-red function node JS code
+This is an example code for a node-red function that will change the cooling temperature to 20 degrees.
+
+    msg.topic = 'set';
+    msg.payload = {
+        ssid :'DaikinAPxxxxx',
+        managementPoint :'climateControl',
+        dataPoint : 'onOffMode',
+        dataPointPath : '/operationModes/cooling/setpoints/roomTemperature',
+        value : 20
+    };
+    return msg;
+
